@@ -10,3 +10,17 @@ client.connect(err => {
     }
     client.close();
 });
+
+const { ApolloServer } = require('apollo-server');
+const typeDefs = require('./schema');
+const resolvers = require('./resolvers/Query');
+
+const server = new ApolloServer({
+    typeDefs,
+    resolvers,
+    playground: true,
+});
+
+server.listen().then(() => {
+    console.log('Corriendo servidor GraphQl en <http://localhost:4000/grapqhql>')
+});

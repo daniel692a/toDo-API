@@ -8,24 +8,16 @@ const typeDefs = gql`
     }
 
     type Query{
-        tasks(id: Int!): Task
-    }
-
-    input TaskInput {
-        id: Int!
-        title: String!
-        completed: Boolean!
+        tasks: [Task]!
+        task(id: Int!): Task
     }
 
     type Mutation{
         createTask(
-            data: TaskInput!
-        ): Task!
-        editTask(
-            title: String!
+            id: Int!,
+            title: String!,
             completed: Boolean!
         ): Task!
-        deleteTask(id: Int!): Boolean!
     }
 `;
 
