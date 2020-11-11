@@ -14,8 +14,7 @@ const typeDefs = gql`
 
     type Mutation{
         createTask(
-            id: Int!,
-            title: String!,
+            title: String!
             completed: Boolean!
         ): Task!
     }

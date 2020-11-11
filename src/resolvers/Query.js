@@ -11,7 +11,7 @@ module.exports = {
     Mutation: {
         createTask: (parent, args, context) => {
             const newTask = {
-                id: args.id,
+                id: tasks.length,
                 title: args.title,
                 completed: args.completed,
             };
