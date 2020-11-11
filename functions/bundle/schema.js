@@ -17,8 +17,6 @@ const typeDefs = gql`
             title: String!
             completed: Boolean!
         ): Task!
-
-        deleteTask(id: Int!): Boolean
     }
 `;
 

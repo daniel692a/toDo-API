@@ -1,4 +1,4 @@
-let tasks=[];
+const tasks=[];
 
 module.exports = {
     Query: {
@@ -18,15 +18,6 @@ module.exports = {
 
             tasks.push(newTask);
             return newTask;
-        },
-        deleteTask: (parent, args, context) => {
-            try{
-                tasks = tasks.filter(item => item.id !== args.id);
-                return true;
-            } catch(error){
-                console.log(error);
-                return false;
-            }
         }
     }
 }
